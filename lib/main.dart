@@ -28,47 +28,22 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         colorSchemeSeed: Colors.blue,
         navigationBarTheme: NavigationBarThemeData(
+          indicatorColor: Theme.of(context).primaryColor.withOpacity(0.25),
           labelTextStyle: MaterialStateProperty.all(const TextStyle(
             fontSize: 14.0,
             fontWeight: FontWeight.w500,
           )),
         ),
         appBarTheme: const AppBarTheme(
-          elevation: 2.0,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12.0),
+          elevation: 0.0,
+          titleSpacing: 8.0,
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
           ),
-        ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          style: ButtonStyle(
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-            ),
-            padding: MaterialStateProperty.all<EdgeInsets>(
-              const EdgeInsets.all(16.0),
-            ),
-            backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).primaryColor),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          ),
-        ),
-      ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        brightness: Brightness.dark,
-        colorSchemeSeed: Colors.blue,
-        navigationBarTheme: NavigationBarThemeData(
-          indicatorColor: Theme.of(context).primaryColorDark.withOpacity(0.25),
-          labelTextStyle: MaterialStateProperty.all(const TextStyle(
-            fontSize: 14.0,
-            fontWeight: FontWeight.w500,
-          )),
-        ),
-        appBarTheme: const AppBarTheme(
-          elevation: 2.0,
+          iconTheme: IconThemeData(color: Colors.black),
         ),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(

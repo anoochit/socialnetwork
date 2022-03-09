@@ -18,11 +18,8 @@ class _CreatePostPageState extends State<CreatePostPage> {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(ThemeData().primaryColor)),
-              child: Text(
-                "Post".toUpperCase(),
-              ),
+            child: IconButton(
+              icon: Icon(Icons.send),
               onPressed: () {
                 // post content
               },
@@ -34,7 +31,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
         children: [
           // user info
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
             child: Row(
               children: [
                 // avatar
@@ -99,7 +96,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
               height: 60,
               selectedIndex: _currentIndex,
               labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-              destinations: const [
+              destinations: [
                 NavigationDestination(icon: Icon(Icons.image), label: 'Image'),
                 NavigationDestination(icon: Icon(Icons.movie), label: 'Video'),
                 NavigationDestination(icon: Icon(Icons.format_quote), label: 'Quot'),

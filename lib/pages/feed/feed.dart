@@ -13,7 +13,7 @@ class FeedPage extends StatelessWidget {
       itemBuilder: (context, index) {
         if (index == 0) {
           return Container(
-            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -23,7 +23,7 @@ class FeedPage extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                  width: MediaQuery.of(context).size.width - (48 * 2) - 8,
+                  width: MediaQuery.of(context).size.width - (48 * 2) - 16,
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     decoration: BoxDecoration(
@@ -44,7 +44,7 @@ class FeedPage extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.collections,
                     size: 48 - 8 - 8,
                   ),
